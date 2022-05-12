@@ -1,6 +1,6 @@
 'use strict';
 
-const { Sequelize } = require('winext-repository').dataSequelize;
+const { Sequelize } = require('winext-repo-store').dataSequelizeStore;
 
 module.exports = {
   name: 'BoardModel',
