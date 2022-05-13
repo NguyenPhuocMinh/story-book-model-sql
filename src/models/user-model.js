@@ -11,6 +11,8 @@ module.exports = {
     email: { type: Sequelize.STRING },
     password: { type: Sequelize.STRING },
     permissions: [Sequelize.STRING],
+    accessToken: { type: Sequelize.STRING },
+    refreshToken: { type: Sequelize.STRING },
     //filter
     slug: { type: Sequelize.STRING },
     deleted: { type: Sequelize.BOOLEAN, defaultValue: false },
