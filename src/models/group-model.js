@@ -3,14 +3,10 @@
 const { Sequelize } = require('winext-repo-store').dataSequelizeStore;
 
 module.exports = {
-  name: 'UserModel',
+  name: 'GroupModel',
   attributes: {
-    firstName: { type: Sequelize.STRING },
-    lastName: { type: Sequelize.STRING },
-    userName: { type: Sequelize.STRING },
-    email: { type: Sequelize.STRING },
-    password: { type: Sequelize.STRING },
-    permissions: [Sequelize.STRING],
+    groupName: { type: Sequelize.STRING },
+    description: { type: Sequelize.STRING },
     //filter
     slug: { type: Sequelize.STRING },
     deleted: { type: Sequelize.BOOLEAN, defaultValue: false },
@@ -20,7 +16,7 @@ module.exports = {
     updated_by: { type: Sequelize.STRING },
   },
   options: {
-    tableName: 'users',
+    tableName: 'groups',
     timestamps: false,
   },
 };
