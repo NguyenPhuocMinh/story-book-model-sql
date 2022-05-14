@@ -13,11 +13,11 @@ module.exports = {
     deleted: { type: Sequelize.BOOLEAN, defaultValue: false },
     created_at: { type: Sequelize.DATE },
     created_by: { type: Sequelize.STRING },
-    updated_at: { type: Sequelize.DATE },
+    updated_at: { type: Sequelize.DATE, defaultValue: Sequelize.NOW },
     updated_by: { type: Sequelize.STRING },
   },
   options: {
     tableName: 'boards',
-    timestamps: false
-  }
-}
+    timestamps: false,
+  },
+};

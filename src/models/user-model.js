@@ -16,9 +16,9 @@ module.exports = {
     //filter
     slug: { type: Sequelize.STRING },
     deleted: { type: Sequelize.BOOLEAN, defaultValue: false },
-    created_at: { type: Sequelize.DATETIME },
+    created_at: { type: Sequelize.DATE },
     created_by: { type: Sequelize.STRING },
-    updated_at: { type: Sequelize.DATETIME, defaultValue: Sequelize.NOW },
+    updated_at: { type: Sequelize.DATE, defaultValue: Sequelize.NOW },
     updated_by: { type: Sequelize.STRING },
   },
   options: {
