@@ -3,7 +3,7 @@
 const { Sequelize } = require('winext-repo-store').dataSequelizeStore;
 
 module.exports = {
-  name: 'BoardModel',
+  name: 'PermissionModel',
   attributes: {
     id: {
       type: Sequelize.UUID,
@@ -12,9 +12,8 @@ module.exports = {
     },
     name: { type: Sequelize.STRING },
     description: { type: Sequelize.STRING },
-    title: { type: Sequelize.STRING },
-    register_date: { type: Sequelize.STRING },
     //filter
+    slug: { type: Sequelize.STRING },
     deleted: { type: Sequelize.BOOLEAN, defaultValue: false },
     created_at: { type: Sequelize.DATE },
     created_by: { type: Sequelize.STRING },
@@ -22,7 +21,7 @@ module.exports = {
     updated_by: { type: Sequelize.STRING },
   },
   options: {
-    tableName: 'boards',
+    tableName: 'permissions',
     timestamps: false,
   },
 };

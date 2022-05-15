@@ -5,14 +5,17 @@ const { Sequelize } = require('winext-repo-store').dataSequelizeStore;
 module.exports = {
   name: 'UserModel',
   attributes: {
+    id: {
+      type: Sequelize.UUID,
+      defaultValue: Sequelize.UUIDV4,
+      primaryKey: true,
+    },
     firstName: { type: Sequelize.STRING },
     lastName: { type: Sequelize.STRING },
     userName: { type: Sequelize.STRING },
     email: { type: Sequelize.STRING },
     password: { type: Sequelize.STRING },
-    permissions: [Sequelize.STRING],
-    accessToken: { type: Sequelize.STRING },
-    refreshToken: { type: Sequelize.STRING },
+    passwordConfirm: { type: Sequelize.STRING },
     //filter
     slug: { type: Sequelize.STRING },
     deleted: { type: Sequelize.BOOLEAN, defaultValue: false },
